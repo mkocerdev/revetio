@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "web development, portfolio, creative agency, Next.js, React, modern websites",
   authors: [{ name: "Revetio" }],
   creator: "Revetio",
+  icons: {
+    icon: "/assets/revetio-icon.svg",
+  },
   openGraph: {
     title: "Revetio - Creative Agency Portfolio",
     description:

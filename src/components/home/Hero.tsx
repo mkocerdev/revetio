@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -9,6 +10,14 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-24 h-[80vh] min-h-[600px] flex items-end justify-start">
+        <div className="absolute bottom-0 right-0">
+          <Image
+            src="/assets/revetio-icon.svg"
+            alt="Revetio Icon"
+            width={400}
+            height={400}
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
