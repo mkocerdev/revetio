@@ -38,7 +38,7 @@ const TefkaYapiContent = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="space-y-8"
             >
               <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 tracking-tight">
@@ -65,35 +65,53 @@ const TefkaYapiContent = () => {
           </div>
         </div>
       </section>
-      <section className="py-24">
-        <div className="mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src="/assets/tefka-yapi.jpg"
-                alt="Tefka Yapı Project"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
+      <section className="py-24 mt-12">
+        <div className=" mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative -mt-8 md:-mt-12"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src="/assets/tefkayapi/tefkayapi-homepage.jpg"
+                  alt="Tefka Yapı Homepage"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative mt-8 md:mt-12"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src="/assets/tefkayapi/tefkayapi-detail.jpg"
+                  alt="Tefka Yapı Detail"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Provided */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
             className="text-left mb-20"
           >
             <h2 className="text-3xl xl:text-4xl font-medium text-gray-900 tracking-tight mb-4">
@@ -117,7 +135,7 @@ const TefkaYapiContent = () => {
                   delay: index * 0.1,
                   ease: "easeOut",
                 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="group space-y-6"
               >
                 <div className="relative overflow-hidden">
@@ -138,7 +156,6 @@ const TefkaYapiContent = () => {
           </div>
         </div>
       </section>
-
       {/* Company Information */}
       <section className="py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -147,7 +164,7 @@ const TefkaYapiContent = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="space-y-8"
             >
               <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 tracking-tight">
@@ -182,7 +199,7 @@ const TefkaYapiContent = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="space-y-8"
             >
               <h3 className="text-2xl font-medium text-gray-900">
@@ -202,7 +219,7 @@ const TefkaYapiContent = () => {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-50px" }}
                     className="text-lg text-gray-600"
                   >
                     {achievement}
