@@ -25,16 +25,6 @@ const MenuIcon = ({ size = 24 }: { size?: number }) => (
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -49,7 +39,7 @@ const Navigation = () => {
   }, [isOpen]);
 
   const navItems = [
-    { name: "Work", href: "/portfolio" },
+    { name: "Works", href: "/works" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -58,19 +48,32 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-xl border-b border-gray-100"
-          : "bg-white"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-700"
+      style={{
+        backgroundColor: "transparent",
+        mixBlendMode: "difference",
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-[75px]">
           {/* Logo */}
-          <Logo href="/" width={100} height={32} />
+          <Logo href="/" width={120} height={40} />
 
-          {/* Menu button */}
-          <div className="relative">
+          {/* Desktop Navigation - Show directly */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-white font-medium text-md"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu button */}
+          <div className="relative lg:hidden">
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
@@ -82,7 +85,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Vertical Left Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -90,7 +93,7 @@ const Navigation = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.3 }}
-            className="absolute right-full top-0 mr-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50"
+            className="absolute right-full top-0 mr-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50 lg:hidden"
           >
             <div className="py-2">
               {navItems.map((item, index) => (

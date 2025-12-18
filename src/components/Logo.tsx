@@ -25,9 +25,14 @@ const Logo = ({
       className={`flex items-center space-x-3 ${className}`}
     >
       {/* SVG Logo */}
-      <div className="flex-shrink-0">
+      <div
+        className="flex-shrink-0"
+        style={{
+          filter: "brightness(0) invert(1)",
+        }}
+      >
         <Image
-          src="/assets/logo.svg"
+          src="/assets/revetio-logo.svg"
           alt="Revetio Logo"
           width={width}
           height={height}

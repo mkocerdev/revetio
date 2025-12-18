@@ -14,8 +14,8 @@ const Hero = () => {
           <Image
             src="/assets/revetio-icon.svg"
             alt="Revetio Icon"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
           />
         </div>
         <motion.div

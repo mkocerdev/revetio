@@ -30,7 +30,7 @@ const Footer = () => {
             {/* Logo */}
             <Link href="/" className="block">
               <Image
-                src="/assets/logo.svg"
+                src="/assets/revetio-logo.svg"
                 alt="Revetio"
                 width={300}
                 height={120}
