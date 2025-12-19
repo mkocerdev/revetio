@@ -11,9 +11,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        light: "#f0f0f0",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        "bbh-bartle": ['"BBH Bartle"', "sans-serif"],
+        "cal-sans": ['"Cal Sans"', "sans-serif"],
+      },
+      fontSize: {
+        "10xl": "12rem", // 192px
+        "11xl": "14rem", // 224px
+        "12xl": "16rem", // 256px
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
