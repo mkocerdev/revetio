@@ -20,10 +20,7 @@ const Logo = ({
   height = 40,
 }: LogoProps) => {
   const logoContent = (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className={`flex items-center space-x-3 ${className}`}
-    >
+    <motion.div className={`flex items-center space-x-3 ${className}`}>
       {/* SVG Logo */}
       <div
         className="flex-shrink-0"
